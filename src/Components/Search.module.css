@@ -1,0 +1,47 @@
+.searchContainer {
+  margin: 20px auto;
+  width: 300px;
+  position: relative;
+}
+
+.input {
+  border: none;
+  border-bottom: 2px solid #b1a53b;
+  padding: 10px 20px;
+  width: 100%;
+  outline: none;
+  font-size: 20px;
+  font-family: sans-serif;
+  color: #b1a53b;
+}
+
+/* 📱 Tablet screens */
+@media (max-width: 1100px) {
+    .searchContainer {
+    width: 600px;
+  }
+}
+@media (max-width: 768px) {
+  .searchContainer {
+    width: 600px;
+  }
+
+  .input {
+    font-size: 18px;
+    padding: 8px 16px;
+  }
+}
+
+/* 📱 Mobile screens */
+@media (max-width: 480px) {
+  .searchContainer {
+    width: 600px;
+    padding: 20px 100px;
+  }
+
+  .input {
+    font-size: 18px;
+    padding: 8px 12px;
+    text-align: center;
+  }
+}

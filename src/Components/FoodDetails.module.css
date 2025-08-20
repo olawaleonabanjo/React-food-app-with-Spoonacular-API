@@ -1,0 +1,139 @@
+.recipeCard {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #b1a53b;
+  box-shadow: 0 4px 8px #b1a53b;
+  border-radius: 10px;
+  font-family: Polysans, sans-serif;
+  color: white;
+}
+
+.recipeName {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.recipeImage {
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.recipeDetails {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.recipeDetails strong {
+  margin-right: 30px;
+}
+
+.recipeInstruction {
+  margin-bottom: 10px;
+}
+
+.recipeInstructions {
+  padding: 0px;
+  border-radius: 5px;
+  color: white;
+}
+
+.recipeInstructions ol {
+  margin-left: 30px;
+}
+
+.recipeInstructions li {
+  margin-left: 10px 0px;
+  margin-bottom: 10px;
+}
+
+.itemContainer {
+  margin-bottom: 30px;
+}
+
+.nameContainer {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 10px;
+  margin-top: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+.imageContainer {
+  width: 100px;
+  height: 100px;
+  border-radius: 10px;
+}
+
+.image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 20px;
+}
+
+.name {
+  font-size: larger;
+  font-weight: bold;
+}
+
+/* 📱 Tablet */
+@media (max-width: 768px) {
+  .recipeCard {
+    padding: 15px;
+    width: 350px;
+  }
+
+  .recipeName {
+    font-size: 20px;
+  }
+
+  .recipeDetails {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .nameContainer {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .imageContainer {
+    width: 80px;
+    height: 80px;
+  }
+}
+
+/* 📱 Mobile */
+@media (max-width: 480px) {
+  .recipeCard {
+    padding: 10px;
+    width: 230px;
+  }
+
+  .recipeName {
+    font-size: 18px;
+  }
+
+  .recipeDetails strong {
+    margin-right: 10px;
+  }
+
+  .imageContainer {
+    width: 70px;
+    height: 70px;
+  }
+
+  .name {
+    font-size: 16px;
+  }
+}
