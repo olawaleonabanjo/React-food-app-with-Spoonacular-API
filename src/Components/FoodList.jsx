@@ -1,4 +1,5 @@
 import FoodItem from '../Components/FoodItem';
+import PropTypes from 'prop-types';
 
 export default function FoodList({foodData, setFoodId}) {
     return (
@@ -9,3 +10,8 @@ export default function FoodList({foodData, setFoodId}) {
       </div>
     );
 }
+
+FoodList.propTypes = {
+  foodData: PropTypes.array.isRequired,
+  setFoodId: PropTypes.func.isRequired,
+};
