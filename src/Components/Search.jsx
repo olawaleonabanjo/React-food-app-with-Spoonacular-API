@@ -16,7 +16,7 @@ export default function Search ({ setFoodData }){
           setFoodData(data.results)
         }
         fetchFood();
-    }, [query]);
+    }, [query, setFoodData]);
 
     return ( 
         <div className={styles.searchContainer}>

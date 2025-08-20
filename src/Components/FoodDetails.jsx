@@ -5,9 +5,9 @@ import styles from './FoodDetails.module.css'
 export default function FoodDetails({ foodId }){
     const [food, setFood] = useState({})
     const [isLoading, setIsLoading] = useState(true)
-    const URL =`https://api.spoonacular.com/recipes/${foodId}/information`
-    const API_KEY = 'c52eb3b06925453da1c7f5eda1c04d53';
     useEffect(() => {
+        const URL =`https://api.spoonacular.com/recipes/${foodId}/information`;
+        const API_KEY = 'c52eb3b06925453da1c7f5eda1c04d53';
         async function fetchFood(){
           const res = await fetch(`${URL}?apiKey=${API_KEY}`)
           const data = await res.json();
