@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
-import './search.module.css';
+import './Search.module.css';
 
 const URL = 'https://api.spoonacular.com/recipes/complexSearch';
 const API_KEY = 'c52eb3b06925453da1c7f5eda1c04d53';
