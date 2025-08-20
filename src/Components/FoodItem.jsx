@@ -1,18 +1,18 @@
-import './FoodItem.module.css';
+import styles from './FoodItem.module.css';
 import PropTypes from 'prop-types';
 
 export default function FoodItem({ food, setFoodId }){
     return (
-                <div className='itemContainer'>
-                    <img className='itemImage' src={food.image} alt="" />
-                    <div className='itemContent'>
-                    <h2 className='itemName'>{ food.title }</h2>
+                <div className={styles.itemContainer}>
+                    <img className={styles.itemImage} src={food.image} alt="" />
+                    <div className={styles.itemContent}>
+                    <h2 className={styles.itemName}>{ food.title }</h2>
                         </div>
-                        <div className='buttonContainer'>
+                        <div className={styles.buttonContainer}>
                     <button onClick={() => {
                         console.log(food.id)
                         setFoodId(food.id)
-                    }} className='itemButton'>View Recipe</button>
+                    }} className={styles.itemButton}>View Recipe</button>
                         </div>
                 </div>
     );

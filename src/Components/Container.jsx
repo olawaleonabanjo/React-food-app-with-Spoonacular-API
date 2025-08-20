@@ -1,9 +1,9 @@
-import './Container.module.css';
+import Styles from './Container.module.css';
 import PropTypes from 'prop-types';
 
 export default function Container ({children}){
     return (
-        <div className='parentContainer'>{children}</div>
+        <div className={Styles.parentContainer}>{children}</div>
     )
 }
 

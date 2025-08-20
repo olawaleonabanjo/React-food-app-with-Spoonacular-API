@@ -1,9 +1,9 @@
-import './InnerContainer.module.css';
+import styles from './InnerContainer.module.css';
 import PropTypes from 'prop-types';
 
 export default function InnerContainer({children}){
     return (
-        <div className='innerContainer'>
+        <div className={styles.innerContainer}>
             {children}
         </div>
     )

@@ -1,9 +1,9 @@
-import './NavBar.module.css'
+import styles from './NavBar.module.css'
 
 export default function NavBar(){
     return ( 
         <div>
-            <h1 className='nav'>🍔Food App🍔</h1>
+            <h1 className={styles.nav}>🍔Food App🍔</h1>
         </div>
     )
 }

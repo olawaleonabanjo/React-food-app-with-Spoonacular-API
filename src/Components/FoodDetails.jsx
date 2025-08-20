@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import PropTypes from 'prop-types';
-import './FoodDetails.module.css'
+import styles from './FoodDetails.module.css'
 
 export default function FoodDetails({ foodId }){
     const [food, setFood] = useState({})
@@ -19,10 +19,10 @@ export default function FoodDetails({ foodId }){
     }, [foodId])
     return (
         <div>
-        <div className='recipeCard'>
-            <h1 className='recipeName'>{food.title}</h1>
-            <img className='recipeImage' src={food.image} alt="" />
-            <div className='recipeDetails'>
+        <div className={styles.recipeCard}>
+            <h1 className={styles.recipeName}>{food.title}</h1>
+            <img className={styles.recipeImage} src={food.image} alt="" />
+            <div className={styles.recipeDetails}>
         <span>
             ⌚<strong>{food.readyInMinutes} Minutes</strong>
             <span>
@@ -38,19 +38,19 @@ export default function FoodDetails({ foodId }){
                 💲<span> <strong>{food.pricePerServing} Per Serving </strong></span>
              </div>
              <h2>Ingredients</h2>
-             <div className='itemContainer'>
+             <div className={styles.itemContainer}>
              {isLoading ? <p>Loading...</p> : food.extendedIngredients.map((item) => (
-                <div className='nameContainer' key={item.id}>
-                    <div className='imageContainer'>
-                    <img className='image' src={`https://spoonacular.com/cdn/ingredients_100x100/`  + item.image} alt="" />
+                <div className={styles.nameContainer} key={item.id}>
+                    <div className={styles.imageContainer}>
+                    <img className={styles.image} src={`https://spoonacular.com/cdn/ingredients_100x100/`  + item.image} alt="" />
                     </div>
-                    <div className='name'>{item.name}</div>
+                    <div className={styles.name}>{item.name}</div>
                     {/* <div className={styles.amount}>{item.amount} {item.unit}</div> */}
                 </div>
             ))}
             </div>
-        <h2 className='recipeInstruction'>Instructions</h2>
-        <div className='recipeInstructions'>
+        <h2 className={styles.recipeInstruction}>Instructions</h2>
+        <div className={styles.recipeInstructions}>
             <ol>
             {isLoading ? (<p>Loading...</p>) : (
             food.analyzedInstructions[0].steps.map((step) =>( <li key={step.number}>{step.step}</li>))
