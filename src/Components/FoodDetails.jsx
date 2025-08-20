@@ -6,17 +6,26 @@ export default function FoodDetails({ foodId }){
     const [food, setFood] = useState({})
     const [isLoading, setIsLoading] = useState(true)
     useEffect(() => {
-        const URL =`https://api.spoonacular.com/recipes/${foodId}/information`;
-        const API_KEY = 'c52eb3b06925453da1c7f5eda1c04d53';
-        async function fetchFood(){
-          const res = await fetch(`${URL}?apiKey=${API_KEY}`)
-          const data = await res.json();
-          console.log(data);
-          setFood(data);
-          setIsLoading(false);
-        }
-        fetchFood();
-    }, [foodId])
+  if (!foodId) return; // prevent request if no id
+
+  const URL = `https://api.spoonacular.com/recipes/${foodId}/information`;
+  const API_KEY = import.meta.env.VITE_SPOONACULAR_KEY;
+
+  async function fetchFood() {
+    try {
+      const res = await fetch(`${URL}?apiKey=${API_KEY}`);
+      if (!res.ok) throw new Error("Failed to fetch food details");
+      const data = await res.json();
+      setFood(data);
+      setIsLoading(false);
+    } catch (err) {
+      console.error("Error fetching food details:", err);
+    }
+  }
+
+  fetchFood();
+}, [foodId]);
+
     return (
         <div>
         <div className={styles.recipeCard}>
